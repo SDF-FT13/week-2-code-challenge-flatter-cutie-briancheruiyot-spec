@@ -1,16 +1,18 @@
 // Your code here
 const characterSpan = document.createElement('span')
-characterSpan.textContent = character.name;
 const characterBar = document.getElementById('character-bar')
-characterBar.appendChild(characterSpan)
 
+let currentCharacter = null;
 
 function fetchCharacters() {
   fetch('http://localhost:3000/characters')
   .then(response => response.json())
   .then(characters => {
     characters.forEach(character => {
+      const characterSpan = document.createElement('span');
+      characterSpan.textContent = character.name;
       characterSpan.addEventListener('click', () => displayCharacterDetails(character.id));
+      characterBar.appendChild(characterSpan);
     })
   })
 }
@@ -47,3 +49,12 @@ votesForm.addEventListener('submit', (event) => {
     }
   }
 });
+
+resetBtn.addEventListener('click', () => {
+  if (currentCharacter) {
+    currentCharacter.votes = 0;
+    voteCount.textContent = 0;
+  }
+});
+
+fetchCharacters()
