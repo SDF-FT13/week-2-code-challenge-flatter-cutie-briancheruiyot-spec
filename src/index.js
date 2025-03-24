@@ -30,7 +30,20 @@ function displayCharacterDetails(characterId) {
   })
 }
 
-const voteForm= document.getElementById('votes-form');
+const votesForm= document.getElementById('votes-form');
 const votesInput = document.getElementById('votes');
 const resetBtn = document.getElementById('reset-btn');
 
+votesForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  if (currentCharacter) {
+    const votesToAdd = parseInt(votesInput.value);
+    if (!isNaN(votesToAdd)) {
+      currentCharacter.votes += votesToAdd;
+      voteCount.textContent = currentCharacter.votes;
+      votesInput.value = '';
+      //Extra Bonus
+      patchCharacterVotes(currentCharacter.id, currentCharacter.votes);
+    }
+  }
+});
