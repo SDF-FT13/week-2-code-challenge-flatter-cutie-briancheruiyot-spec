@@ -17,6 +17,7 @@ function fetchCharacters() {
 
 const characterName = document.getElementById('name')
 const characterImage = document.getElementById('image')
+const voteCount = document.getElementById('vote-count')
 
 function displayCharacterDetails(characterId) {
   fetch(`http://localhost:3000/characters/${characterId}`)
