@@ -29,3 +29,8 @@ function displayCharacterDetails(characterId) {
     voteCount.textContent = character.votes;
   })
 }
+
+const voteForm= document.getElementById('votes-form');
+const votesInput = document.getElementById('votes');
+const resetBtn = document.getElementById('reset-btn');
+
