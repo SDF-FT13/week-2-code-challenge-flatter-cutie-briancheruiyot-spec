@@ -193,7 +193,7 @@ Users can vote for a character and reset the vote count.
 
 Data is fetched dynamically from db.json.
 
-🔧 Installation & Setup
+ Installation & Setup
 
 Clone the repository:
 
@@ -220,7 +220,7 @@ GET /characters/:id - Fetches a specific character by ID.
 
 PATCH /characters/:id - Updates a character's vote count.
 
-💻 Usage
+ Usage
 
 Click on a character in the character bar to view details.
 
@@ -228,7 +228,7 @@ Enter a number in the input box and click "Add Votes" to increase votes.
 
 Click "Reset Votes" to reset the vote count to 0.
 
-🛠 Future Enhancements
+ Future Enhancements
 
 Implement the "Add New Character" feature.
 
@@ -236,6 +236,6 @@ Store votes persistently using PATCH requests.
 
 Improve UI with animations and responsiveness.
 
-📜 License
+ License
 
 This project is for educational purposes and is free to use and modify.
