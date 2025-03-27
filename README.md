@@ -166,3 +166,76 @@ deliverables!**
       "votes": 0
     }
     ```
+
+
+
+Flatacuties
+
+Flatacuties is a simple web application that displays a list of adorable characters. Users can select a character to view more details, vote for their favorites, and reset votes.
+
+ Project Structure
+
+index.html - The main HTML file for the app.
+
+style.css - Contains all the styles for the application.
+
+src/index.js - The JavaScript file responsible for fetching and displaying characters.
+
+db.json - A mock database containing character data.
+
+ Features
+
+Displays a list of characters in the character bar.
+
+Allows users to click on a character to view more details.
+
+Users can vote for a character and reset the vote count.
+
+Data is fetched dynamically from db.json.
+
+🔧 Installation & Setup
+
+Clone the repository:
+
+git clone https://github.com/briancheruiyot-spec/flatacuties.git
+cd flatacuties
+
+Install JSON Server:
+
+npm install -g json-server
+
+Start the JSON Server:
+
+json-server --watch db.json
+
+This will run the server on http://localhost:3000.
+
+Open index.html in your browser.
+
+ API Endpoints
+
+GET /characters - Fetches the list of all characters.
+
+GET /characters/:id - Fetches a specific character by ID.
+
+PATCH /characters/:id - Updates a character's vote count.
+
+💻 Usage
+
+Click on a character in the character bar to view details.
+
+Enter a number in the input box and click "Add Votes" to increase votes.
+
+Click "Reset Votes" to reset the vote count to 0.
+
+🛠 Future Enhancements
+
+Implement the "Add New Character" feature.
+
+Store votes persistently using PATCH requests.
+
+Improve UI with animations and responsiveness.
+
+📜 License
+
+This project is for educational purposes and is free to use and modify.
